@@ -1,0 +1,42 @@
+.nav-item::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #f9f9f9;
+  /* fill-opacity: 4; */
+  z-index: 1;
+  transition: all 0.3 ease-in-out;
+}
+
+.nav-item:hover {
+  .nav-item::after {
+    width: 100%;
+  }
+}
+a {
+  line-height: 1rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.active {
+  background-color: rgba(249, 249, 249, 0.08);
+  i {
+    color: rgba(249, 249, 249, 0.75);
+  }
+  a {
+    color: rgba(249, 249, 249, 0.75);
+    line-height: 1rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.active::before {
+  width: 0.3rem;
+}
